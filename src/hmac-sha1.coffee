@@ -64,10 +64,15 @@ class HMAC_SHA1
     if body.tool_consumer_info_product_family_code == 'canvas'
       originalUrl = url.parse(originalUrl).pathname
 
+    if req.headers and req.headers['x-forwarded-proto']
+      protocol = req.headers['x-forwarded-proto'].split(',')[0]
+    else
+      protocol = req.protocol
+
     if protocol is undefined
       encrypted = req.connection.encrypted
       protocol = (encrypted and 'https') or 'http'
-    
+
     parsedUrl  = url.parse originalUrl, true
     hitUrl     = protocol + '://' + req.headers.host + parsedUrl.pathname
 
