@@ -1,6 +1,6 @@
 {
   "name": "ims-lti",
-  "version": "2.1.5",
+  "version": "2.1.5-cognella.0",
   "description": "Module for building an LTI Tool Provider and accept LTI launch requests",
   "author": {
     "name": "James Rundquist",
@@ -24,10 +24,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/omsmith/ims-lti.git"
+    "url": "https://github.com/murbo/ims-lti.git"
   },
   "bugs": {
-    "url": "http://github.com/omsmith/ims-lti/issues"
+    "url": "http://github.com/murbo/ims-lti/issues"
   },
   "main": "./lib/ims-lti",
   "scripts": {
